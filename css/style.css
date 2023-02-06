@@ -124,7 +124,7 @@ p {
 	background-color: var(--primario);
 	position: fixed;
 	border: none;
-	border-radius: 50%;
+	/* border-radius: 50%; */
 	/* lo escondo para después hacerlo aparecer con js */
 	right: -200px;
 	bottom: 30px;
@@ -302,7 +302,7 @@ footer {
 
 /* FORMACIÓN > LÍNEA */
 
-.timeline_2 {
+.timeline_mobile {
 	display: none;
 }
 
@@ -929,25 +929,25 @@ footer {
 		display: none;
 	}
 
-	.timeline_2 {
+	.timeline_mobile {
 		display: flex;
 		margin-top: var(--miMarginDiv);
 	}
 
-	.timeline_2 ul {
+	.timeline_mobile ul {
 		display: flex;
 		flex-direction: column;
 		gap: 60px;
 	}
 
-	.timeline_2 h4 {
+	.timeline_mobile h4 {
 		font-size: 0.6em;
 		letter-spacing: 3px;
 		margin-bottom: 30px;
 		text-align: center;
 	}
 
-	.timeline_2 p {
+	.timeline_mobile p {
 		padding: 30px;
 		background-color: var(--primario);
 		border-radius: 10px;
