@@ -174,9 +174,8 @@ nav {
 	align-items: center;
 }
 
-.nav-menu {
-	display: flex;
-	gap: 70px;
+li {
+	list-style: none;
 }
 
 .nav-menu a {
@@ -193,7 +192,7 @@ nav {
 	left: 0;
 	height: 1px;
 	width: 100%;
-	background-color: #f6f6f6;
+	background-color: var(--secundario);
 	transform-origin: right;
 	transform: scaleX(0);
 	transition: transform 500ms ease-in-out;
@@ -205,19 +204,26 @@ nav {
 	transform: scaleX(1);
 }
 
-/* HAMBURGUESA */
-
-.open-menu img {
-	width: 30px;
+.nav-menu {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	gap: 70px;
 }
 
-.close-menu img {
-	width: 30px;
-}
-
-.open-menu,
-.close-menu {
+.hamburger {
 	display: none;
+	cursor: pointer;
+	justify-content: flex-end;
+}
+
+.bar {
+	display: block;
+	width: 30px;
+	height: 1px;
+	margin: 7px auto;
+	transition: all 300ms ease-in-out;
+	background-color: white;
 }
 
 /* FOOTER */
@@ -751,46 +757,38 @@ footer {
 
 	/* HEADER */
 
-	.nav-menu {
-		width: 100%;
-		height: 100%;
-		flex-direction: column;
-		gap: 35px;
-		position: fixed;
-		left: 0;
-		top: 0;
-		padding: var(--miPaddingL);
-		background-color: var(--primario);
-		opacity: 0;
-		pointer-events: none;
-		transition: all 500ms;
-	}
-
-	.nav-menu li {
-		font-size: 1em;
-	}
-
-	.open-menu,
-	.close-menu {
+	.hamburger {
 		display: block;
-		border: none;
-		background: none;
-		cursor: pointer;
 	}
 
-	.close-menu {
-		align-self: flex-start;
-		margin: 25px 0 0 0;
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
 	}
 
-	.menu_opened {
-		opacity: 1;
-		pointer-events: all;
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
 	}
 
-	.open-menu:focus:not(:focus-visible),
-	.close-menu:focus:not(:focus-visible) {
-		outline: none;
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-menu {
+		left: -100%;
+		top: 70px;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 30px;
+		background-color: #191919;
+		width: 100%;
+		transition: 600ms;
+		height: 100vh;
+		padding: var(--miPaddingL);
+	}
+
+	.nav-menu.active {
+		left: 0;
 	}
 
 	/* FOOTER */
