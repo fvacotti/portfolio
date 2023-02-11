@@ -1,6 +1,7 @@
-// --------------- SELECTOR SECCIONES Y MENÚ HAMBURGUESA --------------- //
+// --------------- SECCIONES Y MENÚ HAMBURGUESA --------------- //
 
-// seteo menú hamburguesa
+// menú hamburguesa
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -16,7 +17,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 
 // selector secciones
 
-// agarro los links que tengan "#" en ".nav-menu" (^= es "que comience con...")
+// tomo los links que tengan "#" en ".nav-menu" (^= es "que comience con...")
 const menuLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
 
 // selector
@@ -45,7 +46,7 @@ menuLinks.forEach((menuLink) => {
 	}
 });
 
-// --------------- BOTÓN ARRIBA --------------- //
+// --------------- BOTÓN SUBIR --------------- //
 
 function subir() {
 	window.addEventListener("scroll", () => {
@@ -60,4 +61,5 @@ function subir() {
 	})
 }
 
+// llamamos la función
 subir();

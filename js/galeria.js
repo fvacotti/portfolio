@@ -87,7 +87,25 @@ lightBoxNext.addEventListener("click", nextImg);
 // cerrar galería
 
 function closeLightBox() {
-	lightBoxContainer.style.display = "none"
+	lightBoxContainer.style.display = "none";
 }
 
 lightBoxExit.addEventListener("click", closeLightBox);
+
+// eventos teclado
+
+window.addEventListener("keydown", event => {
+	if (lightBoxContainer.style.display === "flex") {
+		switch (event.keyCode) {
+			case 37: // flecha izquierda
+				lightBoxPrev.click();
+				break;
+			case 39: // flecha derecha
+				lightBoxNext.click();
+				break;
+			case 27: // esc
+				lightBoxExit.click();
+				break;
+		}
+	}
+});
