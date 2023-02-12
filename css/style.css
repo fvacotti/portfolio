@@ -174,9 +174,10 @@ nav {
 	gap: 30px;
 }
 
-nav a {
+nav .back-home a {
 	color: var(--secundario);
 	font-size: 0.8em;
+	display: none;
 }
 
 li {
@@ -776,6 +777,10 @@ footer {
 	.hamburger.active .bar:nth-child(3) {
 		transform: translateY(-8px) rotate(-45deg);
 	}
+
+	nav .back-home a {
+		display: block;
+	}	
 
 	.nav-menu {
 		left: -100%;
