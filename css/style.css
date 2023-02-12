@@ -174,12 +174,6 @@ nav {
 	gap: 30px;
 }
 
-nav .back-home a {
-	color: var(--secundario);
-	font-size: 0.8em;
-	display: none;
-}
-
 li {
 	list-style: none;
 }
@@ -778,10 +772,6 @@ footer {
 		transform: translateY(-8px) rotate(-45deg);
 	}
 
-	nav .back-home a {
-		display: block;
-	}	
-
 	.nav-menu {
 		left: -100%;
 		top: 60px;
@@ -799,10 +789,6 @@ footer {
 
 	.nav-menu.active {
 		left: 0;
-	}
-
-	.nav-menu li:nth-child(1) {
-		display: none;
 	}
 
 	/* FOOTER */
