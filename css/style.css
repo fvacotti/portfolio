@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	list-style: none;
-	font-family: 'Azeret Mono', 'monospace';
+	font-family: 'Space Grotesk', 'monospace';
 	font-weight: 400;
 	text-decoration: none;
 }
@@ -85,7 +85,7 @@ html {
 
 body {
 	/* para que el header no tape el main */
-	padding-top: 70px;
+	padding-top: 60px;
 	background-color: var(--primario);
 }
 
@@ -112,7 +112,7 @@ h3 {
 
 p {
 	font-size: 1em;
-	line-height: 1.7;
+	line-height: 1.8;
 	font-weight: 400;
 }
 
@@ -124,7 +124,6 @@ p {
 	background-color: var(--primario);
 	position: fixed;
 	border: none;
-	/* border-radius: 50%; */
 	/* lo escondo para después hacerlo aparecer con js */
 	right: -200px;
 	bottom: 30px;
@@ -159,7 +158,7 @@ p {
 
 header {
 	width: 100%;
-	height: 70px;
+	height: 60px;
 	background-color: var(--primario);
 	display: flex;
 	align-items: center;
@@ -188,7 +187,7 @@ li {
 	content: "";
 	position: absolute;
 	right: 0;
-	top: calc(100% + 5px);
+	top: calc(100% + 1px);
 	left: 0;
 	height: 1px;
 	width: 100%;
@@ -264,12 +263,13 @@ footer {
 
 #home {
 	width: 100%;
-	height: calc(100vh - 70px);
+	height: calc(100vh - 60px);
 	padding: var(--miPaddingL);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: var(--miMarginDiv);
+	letter-spacing: 5px;
 }
 
 #home .line {
@@ -278,7 +278,6 @@ footer {
 
 #home p {
 	color: var(--secundario);
-	letter-spacing: 5px;
 }
 
 /* SOBRE MÍ */
@@ -325,8 +324,9 @@ footer {
 .timeline::before {
 	content: "";
 	position: absolute;
-	height: 100%;
-	width: 2px;
+	height: calc(100% + 50px);
+	width: 1.5px;
+	top: -25px;
 	left: 50%;
 	background-color: var(--primario);
 }
@@ -346,7 +346,7 @@ footer {
 	float: left;
 	clear: right;
 	transform: translateX(-50px);
-	border-radius: 10px 0 10px 10px;
+	/* border-radius: 10px 0 10px 10px; */
 }
 
 .timeline ul li:nth-child(odd)::after {
@@ -360,7 +360,7 @@ footer {
 	float: right;
 	clear: left;
 	transform: translateX(50px);
-	border-radius: 0 10px 10px 10px;
+	/* border-radius: 0 10px 10px 10px; */
 }
 
 .timeline ul li:nth-child(even)::after {
@@ -386,9 +386,7 @@ footer {
 }
 
 .time-content p {
-	font-size: 0.8em;
 	font-weight: 400;
-	line-height: 1.7;
 	color: var(--secundario);
 }
 
@@ -460,14 +458,14 @@ footer {
 }
 
 #contacto form input {
-	padding: 20px;
+	padding: 10px;
 	background-color: var(--secundario);
 	border: 1px solid var(--primario);
 }
 
 #contacto form textarea {
 	resize: none;
-	padding: 20px;
+	padding: 10px;
 	background-color: var(--secundario);
 	border: 1px solid var(--primario)
 }
@@ -560,7 +558,7 @@ footer {
 #present-design {
 	width: 100%;
 	background-color: var(--primario);
-	height: calc(100vh - 70px);
+	height: calc(100vh - 60px);
 	padding: var(--miPaddingL);
 	display: flex;
 	flex-direction: column;
@@ -775,7 +773,7 @@ footer {
 
 	.nav-menu {
 		left: -100%;
-		top: 70px;
+		top: 60px;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
@@ -912,7 +910,7 @@ footer {
 	}
 
 	p {
-		font-size: 0.7em;
+		font-size: 0.8em;
 	}
 
 	/* SOBRE MÍ */
@@ -941,15 +939,15 @@ footer {
 	.timeline_mobile h4 {
 		font-size: 0.6em;
 		letter-spacing: 3px;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		text-align: center;
 	}
 
 	.timeline_mobile p {
 		padding: 30px;
 		background-color: var(--primario);
-		border-radius: 10px;
 		color: var(--secundario);
+		font-size: 0.8em;
 	}
 
 	/* TRABAJOS */
