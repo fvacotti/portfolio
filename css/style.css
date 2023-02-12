@@ -171,6 +171,12 @@ header {
 nav {
 	display: flex;
 	align-items: center;
+	gap: 30px;
+}
+
+nav a {
+	color: var(--secundario);
+	font-size: 0.8em;
 }
 
 li {
@@ -783,10 +789,15 @@ footer {
 		transition: 600ms;
 		height: 100vh;
 		padding: var(--miPaddingL);
+		padding-top: 20px;
 	}
 
 	.nav-menu.active {
 		left: 0;
+	}
+
+	.nav-menu li:nth-child(1) {
+		display: none;
 	}
 
 	/* FOOTER */
