@@ -715,10 +715,6 @@ footer {
 
 	/* HOME */
 
-	h1 {
-		font-size: 4em;
-	}
-
 	p {
 		font-size: 0.8em;
 	}
@@ -913,6 +909,10 @@ footer {
 
 	p {
 		font-size: 0.8em;
+	}
+
+	#home {
+		letter-spacing: 2px;
 	}
 
 	/* SOBRE MÍ */
