@@ -140,6 +140,10 @@ p {
 	transform: scale(1.1);
 }
 
+.btn-down {
+	display: none;
+}
+
 /* LÍNEAS DIVISORIAS */
 
 .line-container {
@@ -820,6 +824,27 @@ footer {
 
 	p {
 		font-size: 0.8em;
+	}
+
+	.btn-down {
+		display: block;
+		border: none;
+		background-color: var(--primario);
+		padding: var(--miPaddingL);
+	}
+
+	.btn-down a {
+		font-size: 1.5em;
+		color: var(--secundario);
+		position: absolute;
+		bottom: 10vh;
+		left: 50%;
+		cursor: pointer;	
+	}
+
+	.btn-down a:hover {
+		transition: all 500ms;
+		transform: scale(1.1);
 	}
 
 	/* CONTACTO */
