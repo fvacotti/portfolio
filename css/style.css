@@ -836,9 +836,6 @@ footer {
 	.btn-down a {
 		font-size: 1.5em;
 		color: var(--secundario);
-		position: absolute;
-		bottom: 5vh;
-		left: 50%;
 		cursor: pointer;	
 	}
 
