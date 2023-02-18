@@ -614,7 +614,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	gap: 20px;
+	row-gap: 60px;
 }
 
 .gallery-item {
@@ -673,7 +673,7 @@ footer {
 
 .lightbox-exit {
 	font-size: 2em;
-	top: 10%;
+	top: 10vh;
 	right: 10px;
 	width: 2em;
 	height: 2em;
@@ -751,7 +751,7 @@ footer {
 		--primario: #191919;
 		--miPaddingL: 0 80px;
 		--miPaddingSection: 100px 80px;
-		--miMarginDiv: 60px;
+		--miMarginDiv: 40px;
 	}
 
 	/* HEADER */
@@ -836,7 +836,7 @@ footer {
 	.btn-down a {
 		font-size: 1.5em;
 		color: var(--secundario);
-		cursor: pointer;	
+		cursor: pointer;
 	}
 
 	.btn-down a:hover {
@@ -901,7 +901,7 @@ footer {
 
 	:root {
 		--miPaddingL: 0 50px;
-		--miPaddingSection: 70px 50px;
+		--miPaddingSection: 100px 50px;
 		--miMarginDiv: 40px;
 	}
 
