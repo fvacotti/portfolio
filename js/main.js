@@ -61,5 +61,4 @@ function subir() {
 	})
 }
 
-// llamamos la función
 subir();

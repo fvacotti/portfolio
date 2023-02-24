@@ -121,7 +121,12 @@ p {
 .btn-up {
 	width: 40px;
 	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: var(--primario);
+	color: var(--secundario);
+	font-size: 20px;
 	position: fixed;
 	border: none;
 	/* lo escondo para después hacerlo aparecer con js */
@@ -129,11 +134,6 @@ p {
 	bottom: 30px;
 	transition: all 500ms;
 	cursor: pointer;
-}
-
-.btn-up a {
-	color: var(--secundario);
-	font-size: 20px;
 }
 
 .btn-up:hover {
@@ -827,19 +827,18 @@ footer {
 	}
 
 	.btn-down {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		border: none;
 		background-color: var(--primario);
 		padding: var(--miPaddingL);
-	}
-
-	.btn-down a {
 		font-size: 1.5em;
 		color: var(--secundario);
 		cursor: pointer;
 	}
 
-	.btn-down a:hover {
+	.btn-down:hover {
 		transition: all 500ms;
 		transform: scale(1.1);
 	}
