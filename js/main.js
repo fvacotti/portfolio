@@ -6,7 +6,7 @@ window.onload = function () {
 		loader.style.opacity = '0';
 		setTimeout(function () {
 			loader.style.display = 'none';
-		}, 300);
+		}, 500);
 	}, 1000);
 };
 
@@ -68,7 +68,7 @@ function subir() {
 		let btnUp = document.getElementById("btn-up");
 
 		if (scroll >= 300) {
-			btnUp.style.right = 30 + "px";
+			btnUp.style.right = 20 + "px";
 		} else {
 			btnUp.style.right = -200 + "px";
 		}
