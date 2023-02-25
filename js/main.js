@@ -1,4 +1,14 @@
-// --------------- SECCIONES Y MENÚ HAMBURGUESA --------------- //
+// pantalla de carga
+
+window.onload = function () {
+	var loader = document.getElementById('loader');
+	setTimeout(function () {
+		loader.style.opacity = '0';
+		setTimeout(function () {
+			loader.style.display = 'none';
+		}, 300);
+	}, 1000);
+};
 
 // menú hamburguesa
 
@@ -17,7 +27,8 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 
 // selector secciones
 
-// tomo los links que tengan "#" en ".nav-menu" (^= es "que comience con...")
+// tomo links con "#" en ".nav-menu" (^= -> "que comience con...")
+
 const menuLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
 
 // selector
@@ -34,8 +45,11 @@ const observer = new IntersectionObserver((entries) => {
 	});
 },
 
-	// para que no se choquen elementos que estén muy juntos	
-	{ rootMargin: "-30% 0px -70% 0px" }
+	// para que no se choquen elementos que estén muy juntos
+
+	{
+		rootMargin: "-30% 0px -70% 0px"
+	}
 );
 
 menuLinks.forEach((menuLink) => {
@@ -46,7 +60,7 @@ menuLinks.forEach((menuLink) => {
 	}
 });
 
-// --------------- BOTÓN SUBIR --------------- //
+// botón subir
 
 function subir() {
 	window.addEventListener("scroll", () => {
