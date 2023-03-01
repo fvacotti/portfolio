@@ -15,9 +15,10 @@
 :root {
 	--secundario: #f6f6f6;
 	--primario: #191919;
-	--miPaddingL: 0 120px;
-	--miPaddingSection: 120px;
+	--miPaddingL: 0 12vw;
+	--miPaddingSection: 120px 12vw;
 	--miMarginDiv: 60px;
+	--miMarginFooter: 120px 12vw 60px;
 }
 
 /* ANIMACIONES */
@@ -62,7 +63,6 @@
 }
 
 @keyframes blink-1 {
-
 	0%,
 	50%,
 	100% {
@@ -269,18 +269,26 @@ li {
 	background-color: var(--secundario);
 }
 
+.bar:nth-child(1) {
+	margin-top: 0;
+}
+
+.bar:nth-child(3) {
+	margin-bottom: 0;
+}
+
 /* FOOTER */
 
 footer {
 	width: 100%;
 	display: flex;
 	gap: 150px;
-	padding: 120px 120px 60px;
+	padding: var(--miMarginFooter);
 	background-color: var(--secundario);
 	font-size: 0.8em;
 }
 
-.footer_title {
+.footer-title {
 	margin-bottom: 20px;
 	font-weight: 700;
 }
@@ -334,7 +342,7 @@ footer {
 }
 
 #about .about-data {
-	width: 70%;
+	width: 60%;
 }
 
 #about .about-data h2 {
@@ -369,7 +377,7 @@ footer {
 	content: "";
 	position: absolute;
 	height: calc(100% + 50px);
-	width: 1.5px;
+	width: 1px;
 	top: -25px;
 	left: 50%;
 	background-color: var(--primario);
@@ -518,6 +526,7 @@ footer {
 	width: 100%;
 	height: 60px;
 	padding: 0 60px;
+	margin-top: 20px;
 	background-color: var(--primario);
 	color: var(--secundario);
 	font-weight: 700;
@@ -621,7 +630,7 @@ footer {
 }
 
 #present-design p {
-	width: 70%;
+	width: 60%;
 }
 
 /* GALERÍA */
@@ -653,7 +662,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	row-gap: 60px;
+	row-gap: 50px;
 }
 
 .gallery-item {
@@ -786,10 +795,8 @@ footer {
 	/* VARIABLES */
 
 	:root {
-		--secundario: #f6f6f6;
-		--primario: #191919;
-		--miPaddingL: 0 80px;
-		--miPaddingSection: 100px 80px;
+		--miPaddingL: 0 10vw;
+		--miPaddingSection: 100px 10vh;
 		--miMarginDiv: 40px;
 	}
 
@@ -844,7 +851,7 @@ footer {
 
 	nav img {
 		display: flex;
-		height: 28px;
+		height: 24px;
 	}
 
 	/* FOOTER */
@@ -955,8 +962,8 @@ footer {
 	/* VARIABLES */
 
 	:root {
-		--miPaddingL: 0 50px;
-		--miPaddingSection: 100px 50px;
+		--miPaddingL: 0 12vw;
+		--miPaddingSection: 100px 12vw;
 		--miMarginDiv: 40px;
 	}
 
