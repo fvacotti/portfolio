@@ -63,6 +63,7 @@
 }
 
 @keyframes blink-1 {
+
 	0%,
 	50%,
 	100% {
@@ -659,14 +660,12 @@ footer {
 
 .gallery-container {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	row-gap: 50px;
+	display: grid;
+	grid-template: repeat(1, 250px) / repeat(3, 1fr);
+	gap: 50px 50px;
 }
 
 .gallery-item {
-	width: 30%;
 	height: 250px;
 	filter: grayscale(1);
 	cursor: pointer;
@@ -949,11 +948,8 @@ footer {
 
 	/* GALERÍA */
 
-	.gallery-item {
-		width: 45%;
-		height: 250px;
-		filter: grayscale(1);
-		cursor: pointer;
+	.gallery-container {
+		grid-template: repeat(1, 250px) / repeat(2, 1fr);
 	}
 }
 
@@ -1054,11 +1050,7 @@ footer {
 	}
 
 	.gallery-container {
-		width: 100%;
-	}
-
-	.gallery-item {
-		width: 100%;
+		grid-template: repeat(1, 250px) / repeat(1, 1fr);
 	}
 
 	/* GALERÍA > IMAGEN ABIERTA > CONTAINER IMAGEN */
