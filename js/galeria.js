@@ -88,7 +88,7 @@ lightBoxNext.addEventListener("click", nextImg);
 // cerrar galería
 
 lightBoxContainer.addEventListener("click", (e)=>{
-	if (e.target !== lightBoxContent && e.target !== lightBoxPrev && e.target !== lightBoxNext) {
+	if (e.target !== lightBoxContent && e.target !== lightBoxImg && e.target !== lightBoxPrev && e.target !== lightBoxNext) {
 		lightBoxContainer.style.display = "none";
 	}
 })
