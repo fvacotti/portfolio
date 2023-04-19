@@ -951,6 +951,14 @@ footer {
 	.gallery-container {
 		grid-template: repeat(1, 250px) / repeat(2, 1fr);
 	}
+
+	.lightbox-content {
+		height: 55vh;
+	}
+
+	.lightbox-exit {
+		top: -90px;
+	}	
 }
 
 @media (max-width: 600px) {
