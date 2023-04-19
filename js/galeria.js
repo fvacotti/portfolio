@@ -46,6 +46,7 @@ function showLightbox(n) {
 	}
 
 	let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
+	
 	lightBoxImg.setAttribute("src", imageLocation);
 }
 
@@ -86,11 +87,11 @@ lightBoxNext.addEventListener("click", nextImg);
 
 // cerrar galería
 
-function closeLightBox() {
-	lightBoxContainer.style.display = "none";
-}
-
-lightBoxExit.addEventListener("click", closeLightBox);
+lightBoxContainer.addEventListener("click", (e)=>{
+	if (e.target !== lightBoxContent && e.target !== lightBoxPrev && e.target !== lightBoxNext) {
+		lightBoxContainer.style.display = "none";
+	}
+})
 
 // eventos teclado
 
