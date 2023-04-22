@@ -454,17 +454,15 @@ footer {
 .work-container {
 	width: 100%;
 	margin-top: var(--miMarginDiv);
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 50px;
+	display: grid;
+	grid-template: repeat(1, 350px) / repeat(3, 1fr);
+	gap: 50px 50px;
 }
 
 .work-container a {
-	width: 30%;
+	height: 350px;
 	display: flex;
 	align-items: flex-end;
-	height: 350px;
 	font-size: 2em;
 	color: var(--secundario);
 	background-color: var(--primario);
@@ -772,8 +770,8 @@ footer {
 
 	/* TRABAJOS */
 
-	.work-container a {
-		width: 45%;
+	.work-container {
+		grid-template: repeat(1, 350px) / repeat(2, 1fr);
 	}
 
 	/* GALERÍA */
@@ -1038,8 +1036,11 @@ footer {
 
 	/* TRABAJOS */
 
+	.work-container {
+		grid-template: repeat(1, 350px) / repeat(1, 1fr)
+	}
+
 	.work-container a {
-		width: 100%;
 		font-size: 1.5em;
 	}
 
