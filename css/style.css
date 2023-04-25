@@ -332,7 +332,6 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	gap: var(--miMarginDiv);
-	letter-spacing: 5px;
 }
 
 #home .line {
@@ -341,6 +340,7 @@ footer {
 
 #home p {
 	color: var(--secundario);
+	letter-spacing: 2px;
 }
 
 /* SOBRE MÍ */
@@ -993,7 +993,7 @@ footer {
 	/* HOME */
 
 	h1 {
-		font-size: 3em;
+		font-size: 3.5em;
 	}
 
 	h2 {
@@ -1002,10 +1002,6 @@ footer {
 
 	p {
 		font-size: 0.8em;
-	}
-
-	#home {
-		letter-spacing: 2px;
 	}
 
 	/* SOBRE MÍ */
