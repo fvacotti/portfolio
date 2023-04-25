@@ -56,7 +56,7 @@ function currentImg() {
 	lightBoxContainer.style.display = "flex";
 	lightBoxContainer.style.alignItems = "center";
 	lightBoxContainer.style.justifyContent = "center";
-	lightBoxContainer.style.animation = "puff-in-center 700ms cubic-bezier(0.470, 0.000, 0.745, 0.715) both";
+	lightBoxContainer.style.animation = "fade-in 800ms both";
 
 	let imageIndex = parseInt(this.getAttribute("data-index"));
 
