@@ -1,7 +1,7 @@
 // pantalla de carga
 
 window.onload = function () {
-	var loader = document.getElementById('loader');
+	let loader = document.getElementById('loader');
 	setTimeout(function () {
 		loader.style.opacity = '0';
 		setTimeout(function () {
