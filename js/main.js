@@ -1,4 +1,4 @@
-// pantalla de carga
+// Pantalla de carga
 
 window.onload = function () {
 	let loader = document.getElementById('loader');
@@ -10,7 +10,7 @@ window.onload = function () {
 	}, 1000);
 };
 
-// menú hamburguesa
+// Menú hamburguesa
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -25,13 +25,13 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 	navMenu.classList.remove("active");
 }))
 
-// selector secciones
+// Selector secciones
 
-// tomo links con "#" en ".nav-menu" (^= -> "que comience con...")
+// Tomo links con "#" en ".nav-menu" (^= -> "que comience con...")
 
 const menuLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
 
-// selector
+// Selector
 
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
@@ -45,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
 	});
 },
 
-	// para que no se choquen elementos que estén muy juntos
+	// Para que no se choquen elementos que estén muy juntos
 
 	{
 		rootMargin: "-30% 0px -70% 0px"
@@ -60,7 +60,7 @@ menuLinks.forEach((menuLink) => {
 	}
 });
 
-// botón subir
+// Botón subir
 
 function subir() {
 	window.addEventListener("scroll", () => {

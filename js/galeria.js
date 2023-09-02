@@ -1,30 +1,30 @@
 // --------------- GALERÍA --------------- //
 
-// tomo el div de las imagenes
+// Tomo el div de las imagenes
 const galleryItem = document.getElementsByClassName("gallery-item");
 
-// creo elemento para el lightbox
+// Creo elemento para el lightbox
 const lightBoxContainer = document.createElement("div");
 
-// creo área del lightbox
+// Creo área del lightbox
 const lightBoxContent = document.createElement("div");
 
-// creo imagen del lightbox
+// Creo imagen del lightbox
 const lightBoxImg = document.createElement("img");
 
-// creo botones prev, next y exit
+// Creo botones prev, next y exit
 const lightBoxPrev = document.createElement("div");
 const lightBoxNext = document.createElement("div");
 const lightBoxExit = document.createElement("div");
 
-// agrego las clases a los elementos creados
+// Agrego las clases a los elementos creados
 lightBoxContainer.classList.add("lightbox");
 lightBoxContent.classList.add("lightbox-content");
 lightBoxPrev.classList.add("fa-solid", "fa-angle-left", "lightbox-prev");
 lightBoxNext.classList.add("fa-solid", "fa-angle-right", "lightbox-next");
 lightBoxExit.classList.add("fa-solid", "fa-xmark", "lightbox-exit");
 
-// agrego "hijos" a los elementos creados
+// Agrego "hijos" a los elementos creados
 lightBoxContainer.appendChild(lightBoxContent);
 lightBoxContent.appendChild(lightBoxImg);
 lightBoxContent.appendChild(lightBoxPrev);
@@ -33,7 +33,7 @@ lightBoxContent.appendChild(lightBoxExit);
 
 document.body.appendChild(lightBoxContainer);
 
-// galería
+// Galería
 
 let index = 1;
 
@@ -50,7 +50,7 @@ function showLightbox(n) {
 	lightBoxImg.setAttribute("src", imageLocation);
 }
 
-// imagen abierta
+// Imagen abierta
 
 function currentImg() {
 	lightBoxContainer.style.display = "flex";
@@ -67,7 +67,7 @@ for (let i = 0; i < galleryItem.length; i++) {
 	galleryItem[i].addEventListener("click", currentImg);
 }
 
-// slider
+// Slider
 
 function sliderImg(n) {
 	showLightbox(index += n);
@@ -85,7 +85,7 @@ lightBoxPrev.addEventListener("click", prevImg);
 
 lightBoxNext.addEventListener("click", nextImg);
 
-// cerrar galería
+// Ccerrar galería
 
 lightBoxContainer.addEventListener("click", (e)=>{
 	if (e.target !== lightBoxContent && e.target !== lightBoxImg && e.target !== lightBoxPrev && e.target !== lightBoxNext) {
@@ -93,7 +93,7 @@ lightBoxContainer.addEventListener("click", (e)=>{
 	}
 })
 
-// eventos teclado
+// Eventos teclado
 
 window.addEventListener("keydown", event => {
 	if (lightBoxContainer.style.display === "flex") {
