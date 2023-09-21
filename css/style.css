@@ -689,11 +689,11 @@ footer {
 .gallery-item {
 	height: 250px;
 	cursor: pointer;
+	transition: ease-in-out 300ms;
 }
 
 .gallery-item:hover {
-	transition: ease-in-out 600ms;
-	rotate: -5deg;
+	transform: rotate(-2.5deg);
 }
 
 .gallery-item img {
@@ -984,7 +984,7 @@ footer {
 	}
 
 	.gallery-item:hover {
-		rotate: none;
+		transform: none;
 	}
 
 	#gallery .ficha {
