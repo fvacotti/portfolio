@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#212121;}
-	.st1{fill:#F6F6F6;}
+	.st0{fill:#232120;}
+	.st1{fill:#EDF4F5;}
 </style>
 <path class="st0" d="M525,600H75c-41.4,0-75-33.6-75-75V75C0,33.6,33.6,0,75,0h450c41.4,0,75,33.6,75,75v450
 	C600,566.4,566.4,600,525,600z"/>
 <g>
-	<rect x="173.3" y="220.8" class="st1" width="253.3" height="63.3"/>
-	<path class="st1" d="M315.8,110h110.8v63.3H252.5l0,0C252.5,138.3,280.8,110,315.8,110z"/>
-	<rect x="252.5" y="331.7" class="st1" width="63.3" height="158.3"/>
+	<circle class="st1" cx="215.6" cy="426.7" r="63.3"/>
+	<path class="st1" d="M447.8,110v84.4H152.2c0-46.6,37.8-84.4,84.4-84.4H447.8z"/>
+	<path class="st1" d="M447.8,236.7c0,46.6-37.8,84.4-84.4,84.4H152.2v-84.4H447.8z"/>
 </g>
 </svg>
