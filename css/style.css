@@ -657,6 +657,15 @@ footer {
 
 /* Galería */
 
+.video{
+	display: flex;
+	justify-content: center;
+}
+
+.video video{
+	width: 30%;
+}
+
 #gallery {
 	padding: var(--miPaddingSection);
 	display: flex;
@@ -693,7 +702,7 @@ footer {
 }
 
 .gallery-item:hover {
-	transform: rotate(-2.5deg);
+	transform: scale(1.1);
 }
 
 .gallery-item img {
@@ -979,6 +988,11 @@ footer {
 
 	/* Galería */
 
+	.video video{
+		width: 50%;
+		margin-top: 10px;
+	}	
+
 	.gallery-container {
 		grid-template: repeat(1, 250px) / repeat(2, 1fr);
 	}
@@ -1105,6 +1119,11 @@ footer {
 	}
 
 	/* Galería */
+
+	.video video{
+		width: 100%;
+	}	
+
 
 	#gallery h3 {
 		font-size: 0.7em;
