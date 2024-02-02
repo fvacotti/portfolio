@@ -659,7 +659,7 @@ footer {
 
 .video{
 	display: flex;
-	justify-content: center;
+	gap: 50px;
 }
 
 .video video{
