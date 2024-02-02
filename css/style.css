@@ -645,15 +645,6 @@ footer {
 
 /* Galería */
 
-.video{
-	display: flex;
-	gap: 50px;
-}
-
-.video video{
-	width: 30%;
-}
-
 #gallery {
 	padding: var(--miPaddingSection);
 	display: flex;
@@ -976,16 +967,6 @@ footer {
 
 	/* Galería */
 
-	.video{
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.video video{
-		width: 45%;
-		margin-top: 10px;
-	}	
-
 	.gallery-container {
 		grid-template: repeat(1, 250px) / repeat(2, 1fr);
 	}
@@ -1112,11 +1093,6 @@ footer {
 	}
 
 	/* Galería */
-
-	.video video{
-		width: 100%;
-	}	
-
 
 	#gallery h3 {
 		font-size: 0.7em;
