@@ -106,18 +106,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-	width: 4px;
-}
-
-::-webkit-scrollbar-track {
-	background-color: var(--primario);
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: var(--secundario);
-}
-
 body {
 	/* para que el header no tape el main */
 	padding-top: 60px;
@@ -988,8 +976,13 @@ footer {
 
 	/* Galería */
 
+	.video{
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
 	.video video{
-		width: 50%;
+		width: 45%;
 		margin-top: 10px;
 	}	
 
