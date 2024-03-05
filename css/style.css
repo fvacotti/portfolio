@@ -360,98 +360,113 @@ footer {
 	margin-bottom: var(--miMarginDiv);
 }
 
-/* Formación */
+/* Formación & Experiencia*/
 
-#formacion {
+#formacion,
+#experiencia {
 	background-color: var(--secundario);
 	padding: var(--miPaddingSection);
 	color: var(--primario);
 }
 
-/* Formación > línea */
-
-.timeline_mobile {
-	display: none;
+#formacion h2 {
+	margin-bottom: calc(var(--miMarginDiv) + 10px);
 }
 
-.timeline {
-	width: 80%;
+#experiencia h2 {
+	margin-bottom: calc(var(--miMarginDiv) + 10px);
+}
+
+/* Formación > línea */
+
+.timeline-items {
+	width: 100%;
 	display: flex;
-	justify-content: center;
-	margin: calc(var(--miMarginDiv) + 35px) auto 0;
+	flex-wrap: wrap;
 	position: relative;
 }
 
-/* Formación > línea medio */
+/* Línea del medio */
 
-.timeline::before {
-	content: "";
+.timeline-items::before {
+	content: '';
 	position: absolute;
-	height: calc(100% + 50px);
 	width: 1px;
-	top: -25px;
-	left: 50%;
+	height: 100%;
 	background-color: var(--primario);
+	left: calc(50% - 1px);
 }
 
-/* Formación > línea > contenido */
+/* Ítems */
 
-.timeline ul li {
-	width: 50%;
-	padding: 25px;
-	background-color: var(--primario);
-	margin-bottom: 50px;
+.timeline-item {
+	margin-bottom: var(--miMarginDiv);
+	width: 100%;
+	position: relative;
 }
 
-/* Formación > línea > parte izquierda */
+/* Quito margin al último ítem */
 
-.timeline ul li:nth-child(odd) {
-	float: left;
-	clear: right;
-	transform: translateX(-50px);
-	/* border-radius: 10px 0 10px 10px; */
-}
-
-.timeline ul li:nth-child(odd)::after {
-	right: -30px;
-	transform: translate(50%, -50%);
-}
-
-/* Formación > línea > parte derecha */
-
-.timeline ul li:nth-child(even) {
-	float: right;
-	clear: left;
-	transform: translateX(50px);
-	/* border-radius: 0 10px 10px 10px; */
-}
-
-.timeline ul li:nth-child(even)::after {
-	left: -30px;
-	transform: translate(-50%, -50%);
-}
-
-/* Le quito el margin-bottom al último li */
-
-.timeline ul li:last-child {
+.timeline-item:last-child {
 	margin-bottom: 0;
 }
 
-/* Formación > línea > datos */
+/* Parte izquierda */
 
-.time-content .date {
-	font-size: 0.6em;
-	font-weight: 400;
-	letter-spacing: 3px;
-	margin-bottom: 10px;
-	position: absolute;
-	top: -30px;
+.timeline-item:nth-child(odd) {
+	padding-right: calc(50% + var(--miMarginDiv));
 }
 
-.time-content p {
-	font-weight: 400;
+/* Parte derecha */
+
+.timeline-item:nth-child(even) {
+	padding-left: calc(50% + var(--miMarginDiv));
+}
+
+/* Puntos de la línea */
+
+.timeline-dot {
+	height: 16px;
+	width: 16px;
+	background-color: var(--secundario);
+	border: solid 1px var(--primario);
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top: 0px;
+}
+
+/* Fechas */
+
+.timeline-date {
+	font-size: 0.6em;
+	letter-spacing: 2px;
+	color: var(--primario);
+	padding: 0px 30px 15px 30px;
+}
+
+/* Datos a llenar */
+
+.timeline-content {
+	background-color: var(--primario);
+	padding: 30px;
+}
+
+.timeline-content p {
 	color: var(--secundario);
 }
+
+/* Experiencia
+
+#experiencia {
+	background-color: var(--secundario);
+	padding: var(--miPaddingSection);
+	color: var(--primario);
+}
+
+#experiencia h2 {
+	margin-bottom: calc(var(--miMarginDiv) + 10px);
+} */
 
 /* Trabajos */
 
@@ -779,47 +794,6 @@ footer {
 
 @media (max-width: 1200px) {
 
-	/* Home */
-
-	p {
-		font-size: 0.8em;
-	}
-
-	/* Trabajos */
-
-	.work-container {
-		grid-template: repeat(1, 350px) / repeat(2, 1fr);
-	}
-
-	/* Galería */
-
-	#gallery h3 {
-		font-size: 0.8em;
-	}
-
-	/* Contacto */
-
-	.form-container {
-		gap: 60px;
-	}
-}
-
-@media (max-width: 900px) {
-
-	/* Variables */
-
-	:root {
-		--miPaddingL: 0 10vw;
-		--miPaddingSection: 100px 10vh;
-		--miMarginDiv: 40px;
-	}
-
-	/* CARGA */
-
-	#loader img {
-		width: 15vh;
-	}
-
 	/* HEADER */
 
 	.hamburger {
@@ -866,6 +840,47 @@ footer {
 	nav img {
 		display: flex;
 		height: 24px;
+	}
+
+	/* Home */
+
+	p {
+		font-size: 0.8em;
+	}
+
+	/* Trabajos */
+
+	.work-container {
+		grid-template: repeat(1, 350px) / repeat(2, 1fr);
+	}
+
+	/* Galería */
+
+	#gallery h3 {
+		font-size: 0.8em;
+	}
+
+	/* Contacto */
+
+	.form-container {
+		gap: 60px;
+	}
+}
+
+@media (max-width: 900px) {
+
+	/* Variables */
+
+	:root {
+		--miPaddingL: 0 10vw;
+		--miPaddingSection: 100px 10vh;
+		--miMarginDiv: 40px;
+	}
+
+	/* CARGA */
+
+	#loader img {
+		width: 15vh;
 	}
 
 	/* Footer */
@@ -950,7 +965,7 @@ footer {
 		text-align: center;
 	}
 
-	.contacto-other h3{
+	.contacto-other h3 {
 		display: none;
 	}
 
@@ -1043,35 +1058,44 @@ footer {
 		width: 100%;
 	}
 
-	/* Formación > línea */
+	/* Formación & Experiencia > línea */
 
-	.timeline {
-		display: none;
+	/* Línea del medio */
+
+	.timeline-items::before {
+		left: 7px;
 	}
 
-	.timeline_mobile {
-		display: flex;
-		margin-top: var(--miMarginDiv);
+	/* Cambio la distribución */
+
+	.timeline-item:nth-child(odd) {
+		padding-right: 0;
 	}
 
-	.timeline_mobile ul {
-		display: flex;
-		flex-direction: column;
-		gap: 60px;
+	/* Espacio entre línea e ítems */
+
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even) {
+		padding-left: var(--miMarginDiv);
 	}
 
-	.timeline_mobile h4 {
-		font-size: 0.6em;
-		letter-spacing: 3px;
-		margin-bottom: 20px;
-		text-align: center;
+	/* Puntos de la línea */
+
+	.timeline-dot {
+		left: 0;
 	}
 
-	.timeline_mobile p {
-		padding: 30px;
+	/* Fechas */
+
+	.timeline-date {
+		padding: 0px 20px 10px 20px;
+	}
+
+	/* Datos a llenar */
+
+	.timeline-content {
 		background-color: var(--primario);
-		color: var(--secundario);
-		font-size: 0.8em;
+		padding: 20px;
 	}
 
 	/* Trabajos */
