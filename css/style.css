@@ -18,7 +18,7 @@
 	--miPaddingL: 0 12vw;
 	--miPaddingSection: 120px 12vw;
 	--miMarginDiv: 60px;
-	--miMarginFooter: 120px 12vw 60px;
+	--miMarginFooter: 240px 12vw 60px;
 }
 
 /* Animaciones */
@@ -292,7 +292,8 @@ li {
 footer {
 	width: 100%;
 	display: flex;
-	gap: 150px;
+	/* gap: 150px; */
+	justify-content: space-between;
 	padding: var(--miMarginFooter);
 	background-color: var(--secundario);
 	font-size: 0.8em;
@@ -564,15 +565,12 @@ footer {
 
 .contacto-other {
 	width: 40%;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
 }
 
 .contacto-other ul {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-end;
 	gap: 30px;
 }
 
@@ -965,14 +963,11 @@ footer {
 		text-align: center;
 	}
 
-	.contacto-other h3 {
-		display: none;
-	}
-
 	.contacto-other ul {
+		flex-direction: row;
 		justify-content: center;
-		gap: 15px
-	}
+		gap: 15px;
+	}	
 
 	.contacto-other ul li a {
 		font-size: 20px;
