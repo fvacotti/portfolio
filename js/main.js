@@ -1,14 +1,20 @@
 // Pantalla de carga
 
-window.onload = function () {
-	let loader = document.getElementById('loader');
+var animation = lottie.loadAnimation({
+	container: document.getElementById('splash-animation'),
+	renderer: 'svg',
+	loop: false,
+	autoplay: true,
+	path: 'splash.json'
+});
+
+animation.addEventListener('complete', function () {
+	document.getElementById('splash-animation').classList.add('hidden');
 	setTimeout(function () {
-		loader.style.opacity = '0';
-		setTimeout(function () {
-			loader.style.display = 'none';
-		}, 500);
-	}, 1000);
-};
+		document.getElementById('splash-animation').style.display = 'none';
+		document.getElementById('splash-background').style.display = 'none';
+	}, 500);
+});
 
 // Menú hamburguesa
 
