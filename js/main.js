@@ -1,6 +1,6 @@
 // Pantalla de carga
 
-var animation = lottie.loadAnimation({
+const animation = lottie.loadAnimation({
 	container: document.getElementById('splash-animation'),
 	renderer: 'svg',
 	loop: false,

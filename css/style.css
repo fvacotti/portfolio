@@ -100,6 +100,21 @@
 	}
 }
 
+@keyframes tracking {
+	0% {
+		letter-spacing: -.2em;
+		opacity: 0
+	}
+
+	40% {
+		opacity: .6
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
 /* General */
 
 html {
@@ -118,6 +133,8 @@ body {
 
 h1 {
 	font-size: 6em;
+	line-height: 0.9;
+	animation: tracking 500ms linear both;
 }
 
 h2 {
@@ -148,23 +165,23 @@ p {
 	height: 100%;
 	background-color: var(--primario);
 	z-index: 900;
-  }
-  
-  #splash-animation {
+}
+
+#splash-animation {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 50vw; 
+	width: 50vw;
 	height: 50vh;
 	z-index: 1000;
 	transition: opacity 500ms ease-out;
 	opacity: 1;
-  }
-  
-  #splash-animation.hidden {
+}
+
+#splash-animation.hidden {
 	opacity: 0;
-  }
+}
 
 /* Botón subir */
 
@@ -495,27 +512,27 @@ footer {
 	animation: blink-1 600ms both;
 }
 
-.caja-br{
+.caja-br {
 	grid-column: 1 / 7;
 	grid-row: 1;
 }
 
-.caja-ed{
+.caja-ed {
 	grid-column: 1 / 5;
 	grid-row: 2;
 }
 
-.caja-lt{
+.caja-lt {
 	grid-column: 1 / 3;
 	grid-row: 3;
 }
 
-.caja-ux{
+.caja-ux {
 	grid-column: 3 / 7;
 	grid-row: 3;
 }
 
-.caja-aq{
+.caja-aq {
 	grid-column: 5 / 7;
 	grid-row: 2;
 }
@@ -873,26 +890,26 @@ footer {
 	.work-container {
 		grid-template: repeat(3, 300px) / repeat(6, 1fr);
 	}
-	
-	.caja-ed{
+
+	.caja-ed {
 		grid-column: 1 / 4;
 		grid-row: 2;
 	}
-	
-	.caja-lt{
+
+	.caja-lt {
 		grid-column: 1 / 4;
 		grid-row: 3;
 	}
-	
-	.caja-ux{
+
+	.caja-ux {
 		grid-column: 4 / 7;
 		grid-row: 3;
 	}
-	
-	.caja-aq{
+
+	.caja-aq {
 		grid-column: 4 / 7;
 		grid-row: 2;
-	}	
+	}
 
 	/* Galería */
 
@@ -1009,7 +1026,7 @@ footer {
 		flex-direction: row;
 		justify-content: center;
 		gap: 15px;
-	}	
+	}
 
 	.contacto-other ul li a {
 		font-size: 20px;
@@ -1078,7 +1095,7 @@ footer {
 	/* Home */
 
 	h1 {
-		font-size: 3.5em;
+		font-size: 3em;
 	}
 
 	h2 {
@@ -1141,31 +1158,31 @@ footer {
 		grid-template: repeat(5, 300px) / repeat(1, 1fr)
 	}
 
-	.caja-br{
+	.caja-br {
 		grid-column: 1;
 		grid-row: 1;
 	}
-	
-	.caja-ed{
+
+	.caja-ed {
 		grid-column: 1;
 		grid-row: 2;
 	}
-	
-	.caja-lt{
+
+	.caja-lt {
 		grid-column: 1;
 		grid-row: 4;
 	}
-	
-	.caja-ux{
+
+	.caja-ux {
 		grid-column: 1;
 		grid-row: 5;
 	}
-	
-	.caja-aq{
+
+	.caja-aq {
 		grid-column: 1;
 		grid-row: 3;
 	}
-	
+
 
 	.work-container a {
 		font-size: 1.5em;
