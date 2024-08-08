@@ -462,7 +462,7 @@ footer {
 /* Fechas */
 
 .timeline-date {
-	font-size: 0.6em;
+	font-size: 1em;
 	letter-spacing: 2px;
 	color: var(--primario);
 	padding: 0px 30px 15px 30px;
@@ -987,11 +987,6 @@ footer {
 		cursor: pointer;
 	}
 
-	.btn-down:hover {
-		transition: all 500ms;
-		transform: scale(1.1);
-	}
-
 	/* Contacto */
 
 	.form-container {
@@ -1142,6 +1137,7 @@ footer {
 	/* Fechas */
 
 	.timeline-date {
+		font-size: 0.8em;
 		padding: 0px 20px 10px 20px;
 	}
 
