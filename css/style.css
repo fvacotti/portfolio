@@ -18,7 +18,7 @@
 	--miPaddingL: 0 12vw;
 	--miPaddingSection: 120px 12vw;
 	--miMarginDiv: 60px;
-	--miMarginFooter: 240px 12vw 60px;
+	--miMarginFooter: 120px 12vw 60px;
 }
 
 /* Animaciones */
@@ -62,17 +62,17 @@
 	}
 }
 
-@keyframes blink-1 {
-
-	0%,
-	50%,
-	100% {
-		opacity: 1;
+@keyframes attention {
+	0% {
+		transform: scale(1);
 	}
 
-	25%,
-	75% {
-		opacity: 0;
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }
 
@@ -207,10 +207,6 @@ p {
 	transform: scale(1.1);
 }
 
-.btn-down {
-	display: none;
-}
-
 /* Líneas divisorias */
 
 .line-container {
@@ -244,6 +240,8 @@ nav {
 	align-items: center;
 	gap: 30px;
 }
+
+/* ícono home */
 
 nav img {
 	display: none;
@@ -342,6 +340,7 @@ footer {
 .footer-redes a {
 	font-size: 25px;
 	color: var(--primario);
+	transition: 500ms;
 }
 
 /* Home */
@@ -349,7 +348,7 @@ footer {
 #home {
 	width: 100%;
 	height: calc(100vh - 60px);
-	padding: var(--miPaddingL);
+	padding: var(--miPaddingSection);
 	color: var(--secundario);
 	display: flex;
 	flex-direction: column;
@@ -364,6 +363,23 @@ footer {
 #home p {
 	color: var(--secundario);
 	letter-spacing: 2px;
+}
+
+#home .btn-go {
+	width: fit-content;
+	height: fit-content;
+	font-size: 4em;
+	position: absolute;
+	top: 12vw;
+	right: 12vw;
+	transition: 500ms;
+	animation: attention 1s ease-in-out infinite both;
+	display: none;
+	color: var(--secundario);
+}
+
+#home .btn-go a {
+	color: var(--secundario);
 }
 
 /* Sobre mí */
@@ -500,16 +516,17 @@ footer {
 	display: flex;
 	align-items: flex-end;
 	font-size: 2em;
+	line-height: 1;
 	color: var(--secundario);
 	background-color: var(--primario);
 	padding: 0 30px 30px;
+	transition: 500ms;
+	border: 1px solid var(--primario);
 }
 
 .work-container a:hover {
 	background-color: var(--secundario);
 	color: var(--primario);
-	transition: all 500ms;
-	animation: blink-1 600ms both;
 }
 
 .caja-br {
@@ -579,7 +596,7 @@ footer {
 	resize: none;
 	padding: 10px;
 	background-color: var(--secundario);
-	border: 1px solid var(--primario)
+	border: 1px solid var(--primario);
 }
 
 #contacto form .send {
@@ -592,10 +609,12 @@ footer {
 	font-weight: 700;
 	font-size: 1em;
 	cursor: pointer;
+	transition: 500ms;
 }
 
 #contacto form .send:hover {
-	animation: blink-1 600ms both;
+	background-color: var(--secundario);
+	color: var(--primario);
 }
 
 .contacto-other {
@@ -611,7 +630,8 @@ footer {
 
 .contacto-other ul li a {
 	color: var(--primario);
-	font-size: 25px;
+	font-size: 2em;
+	transition: 500ms;
 }
 
 /* Hover redes sociales */
@@ -670,11 +690,11 @@ footer {
 	background-color: var(--primario);
 	color: var(--secundario);
 	height: calc(100vh - 60px);
-	padding: var(--miPaddingL);
+	padding: var(--miPaddingSection);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	gap: var(--miMarginDiv);
+	position: relative;
 }
 
 #present-design .line {
@@ -689,6 +709,17 @@ footer {
 
 #present-design p {
 	width: 40%;
+}
+
+#present-design .btn-go {
+	width: fit-content;
+	height: fit-content;
+	font-size: 4em;
+	position: absolute;
+	top: 12vw;
+	right: 12vw;
+	transition: 500ms;
+	animation: attention 1s ease-in-out infinite both;
 }
 
 /* Galería */
@@ -786,9 +817,8 @@ footer {
 /* Galería > flechas + exit */
 
 .lightbox-exit {
-	font-size: 2em;
 	top: 10vh;
-	right: 10px;
+	right: -5vw;
 	width: 2em;
 	height: 2em;
 	border-radius: 50%;
@@ -796,11 +826,12 @@ footer {
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	font-size: 1em;
+	font-size: 2em;
 	color: var(--secundario);
 	background-color: var(--primario);
 	cursor: pointer;
 	opacity: 0.75;
+	transition: 500ms;
 }
 
 .lightbox-prev,
@@ -812,19 +843,35 @@ footer {
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	font-size: 1em;
+	font-size: 2em;
 	color: var(--secundario);
 	background-color: var(--primario);
 	cursor: pointer;
 	opacity: 0.75;
+	transition: 500ms;
 }
 
 .lightbox-prev {
-	left: 10px;
+	left: -5vw;
 }
 
 .lightbox-next {
-	right: 10px;
+	right: -5vw;
+}
+
+.lightbox-exit:hover {
+	color: var(--primario);
+	background-color: var(--secundario);
+}
+
+.lightbox-prev:hover {
+	color: var(--primario);
+	background-color: var(--secundario);
+}
+
+.lightbox-next:hover {
+	color: var(--primario);
+	background-color: var(--secundario);
 }
 
 /* Responsive */
@@ -922,6 +969,15 @@ footer {
 	.form-container {
 		gap: 60px;
 	}
+
+	/* Presentación trabajos */
+
+	#present-design .btn-go {
+		position: absolute;
+		top: 80%;
+		bottom: 0;
+		transition: 500ms;
+	}
 }
 
 @media (max-width: 900px) {
@@ -930,14 +986,8 @@ footer {
 
 	:root {
 		--miPaddingL: 0 10vw;
-		--miPaddingSection: 100px 10vh;
+		--miPaddingSection: 100px 10vw;
 		--miMarginDiv: 40px;
-	}
-
-	/* CARGA */
-
-	#loader img {
-		width: 15vh;
 	}
 
 	/* Footer */
@@ -945,7 +995,7 @@ footer {
 	footer {
 		flex-direction: column;
 		gap: 70px;
-		padding: 100px 80px 40px;
+		padding: var(--miPaddingSection);
 	}
 
 	.footer_title {
@@ -967,25 +1017,23 @@ footer {
 
 	/* HOME */
 
+	h1 {
+		font-size: 5em;
+	}
+
 	h2 {
 		font-size: 2em;
 	}
 
 	p {
-		font-size: 0.8em;
+		font-size: 1em;
 	}
 
-	.btn-down {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: none;
-		background-color: var(--primario);
-		padding: var(--miPaddingL);
-		font-size: 1.5em;
-		color: var(--secundario);
-		cursor: pointer;
-	}
+	#home .btn-go {
+		display: block;
+		top: 80%;
+		font-size: 3em;
+	}	
 
 	/* Contacto */
 
@@ -1029,6 +1077,18 @@ footer {
 
 	/* Páginas */
 
+	/* Presentación de diseños */
+
+	#present-design p {
+		width: 80%;
+	}
+
+	/* Presentación trabajos */
+
+	#present-design .btn-go {
+		font-size: 3em;
+	}
+
 	/* Galería */
 
 	.gallery-container {
@@ -1049,8 +1109,24 @@ footer {
 		height: 55vh;
 	}
 
+	.lightbox-prev,
+	.lightbox-next {
+		font-size: 1em;
+	}
+
+	.lightbox-prev {
+		left: 0;
+	}
+
+	.lightbox-next {
+		right: 0
+	}
+
 	.lightbox-exit {
-		top: -90px;
+		font-size: 1em;
+		top: -10vw;
+		right: 0;
+		margin: auto;
 	}
 
 	/* Galería > imágen abierta > container de imágen */
@@ -1078,7 +1154,7 @@ footer {
 	}
 
 	footer {
-		padding: 70px 50px 40px;
+		padding: 100px 12vw 50px;
 	}
 
 	/* Botón subir */
@@ -1099,6 +1175,17 @@ footer {
 
 	p {
 		font-size: 0.8em;
+	}
+
+	#home {
+		justify-content: flex-start;
+	}
+
+	#home .btn-go {
+		top: 80%;
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 
 	/* Sobre mí */
@@ -1192,6 +1279,13 @@ footer {
 		width: 100%;
 	}
 
+	#present-design .btn-go {
+		top: 70%;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
 	/* Galería */
 
 	#gallery h3 {
@@ -1206,5 +1300,26 @@ footer {
 		display: grid;
 		grid-template: repeat(1, 1fr) / repeat(2, 1fr);
 		gap: 10px;
+	}
+
+	.lightbox-prev,
+	.lightbox-next {
+		font-size: 1em;
+		bottom: -5vh;
+	}
+
+	.lightbox-prev {
+		left: 0;
+	}
+
+	.lightbox-next {
+		right: 0
+	}
+
+	.lightbox-exit {
+		font-size: 1em;
+		top: -10vw;
+		right: 0;
+		margin: auto;
 	}
 }

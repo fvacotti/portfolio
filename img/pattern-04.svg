@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#Motivo_nuevo);
+      }
+
+      .cls-3 {
+        fill: #121110;
+      }
+    </style>
+    <pattern id="Motivo_nuevo" data-name="Motivo nuevo" x="0" y="0" width="318.22" height="300.92" patternTransform="translate(5559.09 2313.89) scale(1.14 1)" patternUnits="userSpaceOnUse" viewBox="0 0 318.22 300.92">
+      <g>
+        <rect class="cls-1" x="0" width="318.22" height="300.92"/>
+        <g>
+          <circle class="cls-3" cx="282.09" cy="300.92" r="27.09"/>
+          <path class="cls-3" d="M381.43,165.46v36.12h-126.43c0-19.95,16.17-36.12,36.12-36.12h90.31Z"/>
+          <path class="cls-3" d="M381.43,219.65c0,19.95-16.17,36.12-36.12,36.12h-90.31v-36.12h126.43Z"/>
+        </g>
+        <g>
+          <g>
+            <path class="cls-3" d="M63.22,165.46v36.12H-63.22c0-19.95,16.17-36.12,36.12-36.12H63.22Z"/>
+            <path class="cls-3" d="M63.22,219.65c0,19.95-16.17,36.12-36.12,36.12H-63.22v-36.12H63.22Z"/>
+          </g>
+          <circle class="cls-3" cx="36.12" cy="300.92" r="27.09"/>
+        </g>
+        <g>
+          <circle class="cls-3" cx="282.09" cy="0" r="27.09"/>
+          <g>
+            <path class="cls-3" d="M255,135.46v-36.12h126.43c0,19.95-16.17,36.12-36.12,36.12h-90.31Z"/>
+            <path class="cls-3" d="M255,81.28c0-19.95,16.17-36.12,36.12-36.12h90.31v36.12h-126.43Z"/>
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="cls-3" cx="122.99" cy="150.46" r="27.09"/>
+            <path class="cls-3" d="M222.32,15v36.12h-126.43c0-19.95,16.17-36.12,36.12-36.12h90.31Z"/>
+            <path class="cls-3" d="M222.32,69.18c0,19.95-16.17,36.12-36.12,36.12h-90.31v-36.12h126.43Z"/>
+          </g>
+          <g>
+            <circle class="cls-3" cx="195.23" cy="150.46" r="27.09"/>
+            <path class="cls-3" d="M95.89,285.92v-36.12h126.43c0,19.95-16.17,36.12-36.12,36.12h-90.31Z"/>
+            <path class="cls-3" d="M95.89,231.74c0-19.95,16.17-36.12,36.12-36.12h90.31v36.12h-126.43Z"/>
+          </g>
+        </g>
+        <g>
+          <circle class="cls-3" cx="36.12" cy="0" r="27.09"/>
+          <path class="cls-3" d="M-63.22,135.46v-36.12H63.22c0,19.95-16.17,36.12-36.12,36.12H-63.22Z"/>
+          <path class="cls-3" d="M-63.22,81.28c0-19.95,16.17-36.12,36.12-36.12H63.22v36.12H-63.22Z"/>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Capa_3">
+      <rect class="cls-2" width="1920" height="1080"/>
+    </g>
+  </g>
+</svg>
