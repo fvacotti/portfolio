@@ -1,4 +1,4 @@
-// Pantalla de carga
+// Splash de carga
 
 const animation = lottie.loadAnimation({
 	container: document.getElementById('splash-animation'),
@@ -25,6 +25,8 @@ hamburger.addEventListener("click", () => {
 	hamburger.classList.toggle("active");
 	navMenu.classList.toggle("active");
 })
+
+// Función para que el menú se cierre al clickear links
 
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
 	hamburger.classList.remove("active");

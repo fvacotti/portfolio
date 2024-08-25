@@ -23,18 +23,6 @@
 
 /* Animaciones */
 
-@keyframes rotate-in-center {
-	0% {
-		transform: rotate(-360deg);
-		opacity: 0;
-	}
-
-	100% {
-		transform: rotate(0);
-		opacity: 1;
-	}
-}
-
 @keyframes line {
 	0% {
 		transform-origin: left;
@@ -73,20 +61,6 @@
 
 	100% {
 		transform: scale(1);
-	}
-}
-
-@keyframes puff-in-center {
-	0% {
-		transform: scale(2);
-		filter: blur(4px);
-		opacity: 0;
-	}
-
-	100% {
-		transform: scale(1);
-		filter: blur(0px);
-		opacity: 1;
 	}
 }
 
@@ -352,7 +326,6 @@ footer {
 	color: var(--secundario);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	gap: var(--miMarginDiv);
 	position: relative;
 }
@@ -361,9 +334,12 @@ footer {
 	background-color: var(--secundario);
 }
 
+#home h1 {
+	animation: none;
+}
+
 #home p {
 	color: var(--secundario);
-	letter-spacing: 2px;
 }
 
 #home .btn-go {
@@ -375,7 +351,6 @@ footer {
 	right: 12vw;
 	transition: 500ms;
 	animation: attention 1s ease-in-out infinite both;
-	display: none;
 	color: var(--secundario);
 }
 
@@ -757,7 +732,7 @@ footer {
 .gallery-item {
 	height: 250px;
 	cursor: pointer;
-	transition: ease-in-out 300ms;
+	transition: ease-out 300ms;
 }
 
 .gallery-item:hover {
@@ -934,7 +909,6 @@ footer {
 	}
 
 	#home .btn-go {
-		position: absolute;
 		top: 80%;
 		bottom: 0;
 		transition: 500ms;
@@ -1038,7 +1012,6 @@ footer {
 	}
 
 	#home .btn-go {
-		display: block;
 		font-size: 3em;
 		top: 50%;
 		left: 0;
