@@ -354,6 +354,7 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	gap: var(--miMarginDiv);
+	position: relative;
 }
 
 #home .line {
@@ -1182,7 +1183,7 @@ footer {
 	}
 
 	#home .btn-go {
-		top: 80%;
+		top: 70%;
 		left: 0;
 		right: 0;
 		margin: auto;
